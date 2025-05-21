@@ -19,7 +19,7 @@
   font-family: "Red Hat Display";
   font-style: normal;
   font-weight: 900;
-  src: url("../assets/fonts/red-hat-display-v20-latin-500.woff2")
+  src: url("../assets/fonts/red-hat-display-v20-latin-900.woff2")
     format("woff2");
 }
 
@@ -38,15 +38,118 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
+  background: var(--primary-pale-blue)
+    url("../assets/images/pattern-background-mobile.svg") no-repeat;
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
   font-size: 16px;
+  display: block;
+  align-content: center;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  width: min(calc(100% - 42px), 320px);
+  margin-inline: auto;
+  border-radius: 15px;
+}
+
+main > img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.wrapper {
+  padding: 25px;
+}
+
+h1 {
+  color: var(--natural-dark-blue);
+  font-weight: 900;
+  font-size: 20px;
+}
+
+p {
+  color: var(--natural-desaturated-blue);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+.pricing-plan,
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing-plan {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: var(--natural-very-pale-blue);
+}
+
+.plan {
+  gap: 18px;
+}
+
+.music-note {
+  width: 44px;
+}
+
+.plan__info--name {
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--natural-dark-blue);
+}
+
+.plan__info--price {
+  color: var(--natural-desaturated-blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.pricing-plan a {
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.btns__grp a {
+  color: var(--natural-desaturated-blue);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+a.btn {
+  display: block;
+  background-color: var(--primary-bright-blue);
+  color: var(--natural-very-pale-blue);
+  font-weight: 900;
+  font-size: 14px;
+  border-radius: 10px;
+  padding-block: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 20px 10px hsl(224 23% 55% / 0.25);
 }
 
 .attribution {
@@ -55,4 +158,10 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url("../assets/images/pattern-background-desktop.svg");
+  }
 }
