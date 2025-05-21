@@ -1,3 +1,37 @@
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/red-hat-display-v20-latin-500.woff2")
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/red-hat-display-v20-latin-700.woff2")
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/red-hat-display-v20-latin-500.woff2")
+    format("woff2");
+}
+
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+
+  --natural-very-pale-blue: hsl(225, 100%, 98%);
+  --natural-desaturated-blue: hsl(224, 23%, 55%);
+  --natural-dark-blue: hsl(223, 47%, 23%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +41,12 @@
 html,
 body {
   height: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .attribution {
